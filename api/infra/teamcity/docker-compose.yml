@@ -4,7 +4,7 @@ services:
   teamcity:
     image: jetbrains/teamcity-server:2017.1.2
     volumes:
-      - teamcity-server-datadir:/data/teamcit_server/datadir
+      - teamcity-server-datadir:/data/teamcity_server/datadir
       - teamcity-server-logs:/opt/teamcity/logs
     ports:
       - 8111:8111
@@ -13,8 +13,7 @@ services:
     environment:
       SERVER_URL: http://teamcity:8111
     volumes:
-      - /var/run/docker.sock:/var/run/docker.soc
-    restart: unless-stopped
+      - /var/run/docker.sock:/var/run/docker.sock
 
 volumes:
   teamcity-server-datadir:
